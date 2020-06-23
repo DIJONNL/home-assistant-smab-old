@@ -1,6 +1,18 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+homeassistant:
+    name: Home
+    latitude: !secret zone_home_latitude
+    longitude: !secret zone_home_longitude
+    unit_system: metric
+    time_zone: Europe/Amsterdam
+    whitelist_external_dirs:
+      - /config/tmp
+    
+    # Load packages
+    packages: !include_dir_named integrations
+
 # Text to speech
 tts:
   - platform: google_translate
