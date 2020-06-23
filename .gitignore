@@ -1,2 +1,10 @@
+.storage
+*.ignore
+.cloud
+.HA_VERSION
+.pip_progress
 secrets.yaml
 home-assistant.log
+home-assistant_v2.db
+home-assistant_v2.db-wal
+home-assistant_v2.db-shm
