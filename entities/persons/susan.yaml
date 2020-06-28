@@ -1,0 +1,4 @@
+name: Susan
+id: susan
+user_id: !secret user_id_susan
+device_trackers: []

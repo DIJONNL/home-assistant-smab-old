@@ -13,10 +13,6 @@ homeassistant:
     # Load packages
     packages: !include_dir_named integrations
 
-# Text to speech
-tts:
-  - platform: google_translate
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

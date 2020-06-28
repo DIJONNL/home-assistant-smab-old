@@ -1,0 +1,6 @@
+proximity:
+  home_for_meindert:
+    devices:
+      - device_tracker.iphone
+    tolerance: 50
+    unit_of_measurement: m
