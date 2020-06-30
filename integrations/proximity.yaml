@@ -4,3 +4,8 @@ proximity:
       - device_tracker.iphone
     tolerance: 50
     unit_of_measurement: m
+  home_for_susan:
+      devices:
+        - device_tracker.iphone_2
+      tolerance: 50
+      unit_of_measurement: m

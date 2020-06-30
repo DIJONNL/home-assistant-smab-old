@@ -1,0 +1,5 @@
+name: all_devices
+platform: group
+services:
+  - service: notify_mobile_app_iphone
+  - service: notify_mobile_app_ipad_3

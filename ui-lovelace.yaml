@@ -12,3 +12,5 @@
   #custom_header: !include lovelace/cards/custom_header.yaml
   views:
     - !include lovelace/views/dashboard.yaml
+    - !include lovelace/views/outside.yaml
+    - !include lovelace/views/automation.yaml

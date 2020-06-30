@@ -1,5 +1,40 @@
----
-  path: dashboard
-  title: Dashboard
-  icon: mdi:home-assistant
-  cards: []
+path: dashboard
+title: Dashboard
+icon: mdi:home-assistant
+cards: 
+  - type: custom:vertical-stack-in-card
+    title: Overview
+    cards:
+      - type: glance
+        entities:
+          - proximity.home_for_meindert
+          - proximity.home_for_susan
+          - sensor.hacs
+          - entity: binary_sensor.people_home
+            name: People@Home
+            show_state: false
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - sensor.nextsunrise
+              - sensor.nextsunset
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - sensor.sun_azimuth
+              - sensor.sun_elevation
+      - type: custom:auto-entities
+        show_empty: false
+        card:
+          type: glance
+          title: Active in Zone
+        filter:
+          include: []
+          exclude:
+            - state: not_home
+        entities:
+            - person.meindert
+            - person.susan
+

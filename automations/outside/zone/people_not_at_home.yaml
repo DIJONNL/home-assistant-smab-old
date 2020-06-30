@@ -1,0 +1,17 @@
+---
+  #
+  # When nobody is at home make sure that:
+  #
+  # 
+  #
+  # 
+  alias: people_not_at_home
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.people_home
+      to: 'off'
+  action:
+    - service: notify.all_devices
+      data_template:
+        title: "People Not@Home"
+        message: "Nobody@home {{ states('sensor.date_time') }}"
